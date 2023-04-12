@@ -1,0 +1,76 @@
+#home {
+  #fisrt-section {
+    .titles {
+      display: flex;
+      justify-content: center;
+      margin-top: 340px;
+      .text {
+        h4 {
+          color: #fff;
+          font-size: 20px;
+        }
+        p {
+          font-style: italic;
+          text-align: end;
+          margin-top: 10px;
+          color: #fff;
+          font-size: 15px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .img {
+      width: 100%;
+      height: 100vh;
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.452),
+          rgba(0, 0, 0, 0.459)
+        ),
+        url("../../assets/images/history3.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .img2 {
+      width: 100%;
+      height: 100vh;
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.342),
+          rgba(0, 0, 0, 0.459)
+        ),
+        url("../../assets/images/history-practice.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .img3 {
+      width: 100%;
+      height: 100vh;
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.541),
+          rgba(0, 0, 0, 0.521)
+        ),
+        url("../../assets/images/history.webp");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .img4 {
+      width: 100%;
+      height: 100vh;
+      background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.486),
+          rgba(0, 0, 0, 0.562)
+        ),
+        url("../../assets/images/Ancient_Azerbaijan_4.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
