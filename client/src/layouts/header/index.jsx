@@ -2,7 +2,7 @@ import React from "react";
 import "./index.scss";
 import logo from "../../assets/images/logo.png";
 import logo1 from "../../assets/images/logo1.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <div id="header">
@@ -10,7 +10,9 @@ const Header = () => {
         <div className="container">
           <div className="first-header">
             <div className="logo">
-              <img src={logo} alt="" />
+              <Link target="_blank" to={'https://www.aztu.edu.az/az'}>
+                <img src={logo} alt="" />
+              </Link>
             </div>
             <div className="description">
               <div className="head">
