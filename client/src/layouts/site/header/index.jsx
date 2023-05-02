@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.scss";
-import logo from "../../assets/images/logo.png";
-import logo1 from "../../assets/images/logo1.png";
+import logo from "../../../assets/images/logo.png";
+import logo1 from "../../../assets/images/logo1.png";
 import { Link, NavLink } from "react-router-dom";
 const Header = () => {
   return (
@@ -10,13 +10,17 @@ const Header = () => {
         <div className="container">
           <div className="first-header">
             <div className="logo">
-              <Link target="_blank" to={'https://www.aztu.edu.az/az'}>
+              <Link target="_blank" to={"https://www.aztu.edu.az/az"}>
                 <img src={logo} alt="" />
               </Link>
             </div>
             <div className="description">
               <div className="head">
-                <h4>"Tarix həmişə hər şeyi öz yerinə qoyur"</h4>
+                <h4>
+                  Vətənin, ölkəmizin müdafiəsi uğrunda şəhid olmuş insanların
+                  adı daim qəlbimizdədir, onların xatirəsi bizim üçün əzizdir,
+                  onlar bizim qəlbimizdən çıxmaz, unudulmaz!"
+                </h4>
                 <p>Ümummilli lider Heydər Əliyev</p>
               </div>
               <div className="img">
@@ -32,16 +36,16 @@ const Header = () => {
             <nav>
               <ul>
                 <li>
-                  <NavLink to={"/"}>Tarixi Şəxsiyyətlər</NavLink>
+                  <NavLink to={"/"}>Əsas səhifə</NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/books"}>Kitablar</NavLink>
+                  <NavLink to={"/galery"}>Məlumat</NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/galery"}>Qalereya</NavLink>
+                  <NavLink to={"/books"}>Mİlli Qəhrəmanlar</NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/maps"}>Xəritələr</NavLink>
+                  <NavLink to={"/books"}>AzTU Mİlli Qəhrəmanları</NavLink>
                 </li>
               </ul>
             </nav>

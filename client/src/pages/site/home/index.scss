@@ -25,10 +25,10 @@
       height: 100vh;
       background-image: linear-gradient(
           to bottom,
-          rgba(0, 0, 0, 0.452),
-          rgba(0, 0, 0, 0.459)
+          rgba(0, 0, 0, 0.733),
+          rgba(0, 0, 0, 0.7)
         ),
-        url("../../assets/images/history3.jpg");
+        url("../../../assets/images/army1.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -38,10 +38,10 @@
       height: 100vh;
       background-image: linear-gradient(
           to bottom,
-          rgba(0, 0, 0, 0.342),
-          rgba(0, 0, 0, 0.459)
+          rgba(0, 0, 0, 0.7),
+          rgba(0, 0, 0, 0.7)
         ),
-        url("../../assets/images/history-practice.jpg");
+        url("../../../assets/images/army3.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -51,10 +51,10 @@
       height: 100vh;
       background-image: linear-gradient(
           to bottom,
-          rgba(0, 0, 0, 0.541),
-          rgba(0, 0, 0, 0.521)
+          rgba(0, 0, 0, 0.788),
+          rgba(0, 0, 0, 0.788)
         ),
-        url("../../assets/images/history.webp");
+        url("../../../assets/images/army4.webp");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -64,13 +64,55 @@
       height: 100vh;
       background-image: linear-gradient(
           to bottom,
-          rgba(0, 0, 0, 0.486),
+          rgba(0, 0, 0, 0.677),
           rgba(0, 0, 0, 0.562)
         ),
-        url("../../assets/images/Ancient_Azerbaijan_4.jpg");
+        url("../../../assets/images/army2.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
+    }
+  }
+  #about {
+    padding: 80px 0;
+    background-color: aliceblue;
+    .about {
+      display: flex;
+      align-items: center;
+      column-gap: 60px;
+      color: rgb(2, 2, 85);
+      font-weight: 600;
+      font-style: oblique;
+      text-align: justify;
+      img {
+        border-radius: 5px;
+        width: 500px;
+      }
+      .text {
+        line-height: 1.8;
+        font-size: 16px;
+      }
+    }
+  }
+  #about2 {
+    padding: 30px 0 100px 0;
+    background-color: aliceblue;
+    .about2 {
+      display: flex;
+      align-items: center;
+      column-gap: 60px;
+      color: rgb(2, 2, 85);
+      font-weight: 600;
+      font-style: oblique;
+      text-align: justify;
+      img {
+        border-radius: 5px;
+        width: 590px;
+      }
+      .text {
+        line-height: 1.8;
+        font-size: 16px;
+      }
     }
   }
 }

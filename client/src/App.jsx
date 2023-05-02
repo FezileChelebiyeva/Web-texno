@@ -1,15 +1,13 @@
 import "./App.scss";
-import Footer from "./layouts/footer";
-import Header from "./layouts/header";
-import HomePage from "./pages/home";
-import Routing from "./routes";
+import ROUTES from "./routes";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter(ROUTES);
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Routing/>
-      <Footer />
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }

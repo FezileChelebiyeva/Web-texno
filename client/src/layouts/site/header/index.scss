@@ -19,8 +19,10 @@
         column-gap: 30px;
         .head {
           h4 {
+            max-width: 450px;
             color: #fff;
-            font-size: 17px;
+            font-size: 14px;
+            line-height: 1.5;
           }
           p {
             font-style: italic;
@@ -28,6 +30,7 @@
             margin-top: 10px;
             color: #fff;
             font-weight: 500;
+            font-size: 13px;
           }
         }
         .img {
