@@ -1,20 +1,26 @@
 .admin-navbar {
   width: 20%;
   height: 100%;
-  border-right: 1px solid #e9ecef;
+  border-right: 1px solid #24282c;
   position: fixed;
   top: 0;
+  background-color: #010511;
   .nav {
     width: 100%;
-    padding: 20px 40px;
-    .logo{
-      img{
-        width: 100px;
+    height: 80px;
+    .logo {
+      display: flex;
+      align-items: center;
+      height: 80px;
+      padding: 0 25px;
+      img {
+        width: 110px;
       }
     }
   }
   nav {
-    padding: 30px 40px;
+    padding: 15px 25px;
+    border-top: 1px solid #24282c;
     ul {
       .nav-menu {
         margin-top: 15px;
@@ -28,12 +34,12 @@
           align-items: center;
           cursor: pointer;
           transition: all 0.3s;
-          .fa-solid{
+          .fa-solid {
             font-size: 13px;
           }
         }
         a {
-          color: black;
+          color: #fff;
           font-size: 16px;
           font-weight: 600;
           letter-spacing: 1px;
@@ -42,7 +48,7 @@
           display: flex;
           align-items: center;
           column-gap: 10px;
-          
+
           &:hover {
             color: #396cf0;
           }

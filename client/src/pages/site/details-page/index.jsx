@@ -24,6 +24,11 @@ const DetailsPage = () => {
         <title>{`${solider.name}`}</title>
         <meta name="description" content="test on react-helmet" />
         <meta name="theme-color" content="#ccc" />
+        <link
+          rel="icon"
+          type="image/svg+xml"
+          href="./src/assets/images/favicon.png"
+        />
       </Helmet>
       <div id="details-head">
         <div className="container">

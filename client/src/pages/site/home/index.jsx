@@ -64,7 +64,7 @@ const HomePage = () => {
               <img src={flag} alt="" />
             </div>
             <div className="text">
-              Azərbaycan xalqı Tarixini yaradan şəxsiyyətlərə, Vətənin azadlığı
+              Azərbaycan xalqı Tarixini yaradan şəxsiyyətlərlə, Vətənin azadlığı
               naminə canını fəda edən oğul və qızlarımızla haqlı olaraq həmişə
               öyünmüşdür. Bu gün Azərbaycanda Vətən hamı üçün müqəddəsdir və bu
               müqəddəsliyin uğrunda canından keçməyə hazır olan oğullarımız
@@ -80,6 +80,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      <section id="background"></section>
       <section id="about2">
         <div className="container">
           <div className="about2">
@@ -106,6 +107,7 @@ const HomePage = () => {
       <section id="card-persons">
         <CardPersons />
       </section>
+      <section id="background2"></section>
     </div>
   );
 };

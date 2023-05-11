@@ -31,10 +31,9 @@ const CardPersons = () => {
           </div>
 
           <div className="cards">
-            {console.log(personalities.data)}
             {personalities.data?.map((element) => {
               return (
-                <div className="card">
+                <div key={element._id} className="card">
                   <div className="image">
                     <Link to={`/details/${element._id}`}>
                       <img src={element.image} alt="image about person" />

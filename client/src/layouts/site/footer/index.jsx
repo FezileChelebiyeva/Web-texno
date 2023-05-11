@@ -42,7 +42,7 @@ const Footer = () => {
                 <i className="fa-solid fa-location-dot icon"></i>
                 <a
                   target="_blank"
-                  href="https://www.google.com/maps/place/Caspian+International+Hospital/@40.343109,49.8082956,17z/data=!4m5!3m4!1s0x40307e8e13662509:0x9c53ea41ee87cca0!8m2!3d40.3433082!4d49.8102321?hl=en"
+                  href="https://www.google.com/maps/place/Azerbaijan+Technical+University/@40.3701047,49.8128709,17z/data=!3m1!4b1!4m6!3m5!1s0x40307dc397d94dc3:0x617bc46b47244c00!8m2!3d40.3701006!4d49.8154458!16zL20vMGNsX3Jw?hl=en"
                 >
                   View on Google map
                 </a>
@@ -73,7 +73,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="footer-bottom"></div>
+      <div className="footer-bottom">
+        <div className="text">
+          2023 © Millitary. Design with <i className="fa-solid fa-heart"></i> by
+          Ch.Fazila
+        </div>
+      </div>
     </div>
   );
 };

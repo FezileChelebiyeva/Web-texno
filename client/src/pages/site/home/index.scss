@@ -86,13 +86,27 @@
       text-align: justify;
       img {
         border-radius: 5px;
-        width: 500px;
+        width: 450px;
       }
       .text {
         line-height: 1.8;
         font-size: 16px;
       }
     }
+  }
+  #background {
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(5, 7, 56, 0.658),
+        rgba(2, 41, 12, 0.616),
+        rgba(122, 11, 11, 0.575)
+      ),
+      url("../../../assets/images/army4.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
   #about2 {
     padding: 30px 0 100px 0;
@@ -107,12 +121,25 @@
       text-align: justify;
       img {
         border-radius: 5px;
-        width: 590px;
+        width: 550px;
       }
       .text {
         line-height: 1.8;
         font-size: 16px;
       }
     }
+  }
+  #background2 {
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.884),
+        rgba(0, 0, 0, 0.801)
+      ),
+      url("../../../assets/images/army10.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }

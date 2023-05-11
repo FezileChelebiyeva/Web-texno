@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from '../../../assets/images/aztu_logo_az.png'
+import logo from "../../../assets/images/logo.png";
 import "./index.scss";
 const AdminNavbar = () => {
-  const [doctor, setDoctor] = useState(false);
-  const [patient, setPatient] = useState(false);
   return (
     <div className="admin-navbar">
       <div className="nav">
         <div className="logo">
-        <img src={logo} alt="" />
+          <img src={logo} alt="" />
         </div>
       </div>
       <nav>
@@ -19,24 +17,40 @@ const AdminNavbar = () => {
               <div className="icon">
                 <i className="fa-solid fa-gauge"></i>
               </div>
+              Admin Panel
+            </NavLink>
+          </li>
+          <li className="nav-menu">
+            <NavLink to={"/admin/solider-list"}>
+              <div className="icon">
+                <i className="fa-solid fa-person-military-rifle"></i>{" "}
+              </div>
               Milli Qəhrəmanlar
             </NavLink>
           </li>
           <li className="nav-menu">
-            <Link onClick={() => setDoctor(!doctor)}>
+            <NavLink to={"/admin/add-solider"}>
               <div className="icon">
-                <i className="fa-solid fa-user-doctor"></i>
+                <i className="fa-solid fa-user-plus"></i>{" "}
               </div>
-              Doctors
-            </Link>
+              Əlavə edin
+            </NavLink>
           </li>
           <li className="nav-menu">
-            <Link onClick={() => setPatient(!patient)}>
+            <NavLink to={"/admin/solider-list-aztu"}>
               <div className="icon">
-                <i className="fa-solid fa-hospital-user"></i>
+                <i className="fa-solid fa-person-military-rifle"></i>{" "}
               </div>
-              Patients
-            </Link>
+              AzTu Milli Qəhrəmanlar
+            </NavLink>
+          </li>
+          <li className="nav-menu">
+            <NavLink to={"/admin/add-solider-aztu"}>
+              <div className="icon">
+                <i className="fa-solid fa-user-plus"></i>{" "}
+              </div>
+              Əlavə edin (AzTu)
+            </NavLink>
           </li>
         </ul>
       </nav>
@@ -44,4 +58,5 @@ const AdminNavbar = () => {
   );
 };
 
-export default AdminNavbar;``
+export default AdminNavbar;
+``;
