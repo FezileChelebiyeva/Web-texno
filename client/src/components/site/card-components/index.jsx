@@ -15,10 +15,21 @@ const CardPersons = () => {
     <div id="cards-component">
       <div className="container">
         <div className="cards-component">
-          <h2>Tarixi Şəxsiyyətlər</h2>
+          <h2>Milli Qəhrəmanlar</h2>
           <div className="logo">
             <img src={logo} alt="" />
           </div>
+          <div className="title">
+            <p>
+              Azərbaycanın ərazi bütövlüyü uğrunda xüsusi xidmətlərinə və
+              qarşıya qoyulmuş döyüş tapşırığını yerinə yetirən zaman göstərdiyi
+              qəhrəmanlıq nümunəsinə görə, həmçinin vəzifə borcunu yerinə
+              yetirərkən igidliyin və mərdliyin nümayiş etdirilməsinə görə
+              Azərbaycan Respublikasının Prezidentinin Sərəncamına əsasən
+              aşağıdakı şəxslərə Azərbaycanın Milli Qəhrəmanı fəxri adı verilib.
+            </p>
+          </div>
+
           <div className="cards">
             {console.log(personalities.data)}
             {personalities.data?.map((element) => {
@@ -30,7 +41,7 @@ const CardPersons = () => {
                     </Link>
                   </div>
                   <div className="about">
-                    <h3>{element.name}</h3>
+                    <Link to={`/details/${element._id}`}>{element.name}</Link>
                   </div>
                 </div>
               );

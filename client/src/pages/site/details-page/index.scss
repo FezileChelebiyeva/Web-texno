@@ -1,8 +1,17 @@
 #details-page {
   #details-head {
-    padding: 100px 0;
-    background-color: #f8f9fa;
+    padding: 110px 0;
     width: 100%;
+    height: 65vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.733),
+        rgba(0, 0, 0, 0.7)
+      ),
+      url("../../../assets/images/army3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     .header {
       display: flex;
       justify-content: center;
@@ -14,129 +23,126 @@
           font-size: 28px;
           line-height: 1.5;
           font-weight: 600;
-          color: #212529;
+          color: #ffffff;
         }
         p {
           text-align: center;
-          color: #8492a6;
+          color: #a9b5c7;
           max-width: 600px;
-          font-size: 15px;
+          font-size: 17px;
           line-height: 1.6;
           margin-top: 20px;
-        }
-        .links {
-          display: flex;
-          justify-content: center;
-          column-gap: 15px;
-          margin-top: 40px;
-          span {
-            display: flex;
-            align-items: center;
-            column-gap: 10px;
-            a {
-              color: #212529;
-              font-size: 12px;
-              font-weight: 500;
-              letter-spacing: 1px;
-              transition: all 0.5s;
-              &.active {
-                color: #396cf0;
-              }
-              &:hover {
-                color: #396cf0;
-              }
-            }
-            .antd-icon {
-              font-size: 8px;
-              font-weight: 600;
-            }
-          }
         }
       }
     }
   }
-  #doctor-details {
+  #solider-details {
     padding: 60px 0;
-    .doctor-details {
-      display: flex;
-      column-gap: 80px;
-      align-items: center;
-      width: 100%;
-      .img {
-        width: 50%;
-        img {
-          border-radius: 50%;
-          width: 400px;
+    .detail-about {
+      .solider-details {
+        display: flex;
+        column-gap: 80px;
+        // align-items: center;
+        width: 100%;
+        .img {
+          margin-top: 20px;
+          img {
+            width: 200px;
+            border-radius: 5px;
+          }
+        }
+        .about-solider {
+          .about {
+            width: 100%;
+            margin-top: 8px;
+            h3 {
+              color: #0e519e;
+              letter-spacing: 0.5px;
+              font-size: 28px;
+              line-height: 1.5;
+              font-weight: 600;
+            }
+            span {
+              font-weight: 700;
+              color: #212529;
+              letter-spacing: 0.5px;
+              font-style: oblique;
+            }
+            p {
+              margin-top: 5px;
+              color: #24272c;
+              letter-spacing: 0.5px;
+              line-height: 1.4;
+              font-style: oblique;
+            }
+          }
+          .rank {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+            padding: 7px 0;
+            p {
+              color: #24272c;
+              letter-spacing: 0.5px;
+              font-size: 15px;
+            }
+          }
         }
       }
-      .about-doctor {
-        width: 50%;
-        .about {
-          width: 100%;
-          display: flex;
-          align-items: center;
-          margin-top: 15px;
-          h3 {
-            color: #396cf0;
+      .about {
+        margin-top: 30px;
+        span {
+          font-weight: 700;
+          color: #212529;
+          letter-spacing: 0.5px;
+          font-style: oblique;
+          margin-top: 20px;
+        }
+        p {
+          color: #24272c;
+          letter-spacing: 0.5px;
+          line-height: 1.5;
+          font-style: oblique;
+          margin-top: 7px;
+        }
+        ul {
+          margin-top: 10px;
+          li {
+            color: #24272c;
             letter-spacing: 0.5px;
-            font-size: 28px;
-            line-height: 1.5;
-            font-weight: 600;
-          }
-          span {
-            width: 35%;
-            font-weight: 700;
-            color: #212529;
-            letter-spacing: 0.5px;
-          }
-          p {
-            width: 65%;
-            color: #8492a6;
-            letter-spacing: 0.5px;
-            font-weight: 600;
+            line-height: 1.2;
+            font-style: oblique;
+            margin-top: 5px;
+            list-style: square;
+            margin-left: 15px;
           }
         }
-        .btn {
-          display: flex;
-          align-items: center;
-          column-gap: 30px;
-          margin-top: 30px;
-          // width: 100%;
-          button {
-            padding: 10px 20px;
-            outline: 0;
-            // width: 50%;
-            cursor: pointer;
-            font-size: 15px;
-            letter-spacing: 0.5px;
-            -webkit-transition: all 0.4s;
-            transition: all 0.4s;
-            border-radius: 5px;
-            background-color: rgba(57, 108, 240, 0.1);
-            border: 1px solid rgba(57, 108, 240, 0.1);
-            color: #396cf0;
-            -webkit-box-shadow: 0 3px 5px 0 rgb(57 108 240 / 30%);
-            box-shadow: 0 3px 5px 0 rgb(57 108 240 / 30%);
-            font-size: 15px;
-            &:hover {
-              background-color: #305ccc;
-              color: #fff;
-            }
-            &:disabled {
-              border: 1px solid rgba(45, 45, 46, 0.1);
-              background-color: rgba(189, 190, 192, 0.322);
-              box-shadow: 0;
-            }
+      }
+      .btn {
+        margin-top: 20px;
+        button {
+          padding: 10px 20px;
+          outline: 0;
+          cursor: pointer;
+          font-size: 15px;
+          letter-spacing: 0.5px;
+          -webkit-transition: all 0.4s;
+          transition: all 0.4s;
+          border-radius: 5px;
+          background-color: rgba(40, 56, 95, 0.1);
+          border: 1px solid rgba(57, 108, 240, 0.1);
+          color: #09329b;
+          -webkit-box-shadow: 0 3px 5px 0 rgb(57 108 240 / 30%);
+          box-shadow: 0 3px 5px 0 rgb(57 108 240 / 30%);
+          font-size: 15px;
+          &:hover {
+            background-color: #21408f;
+            color: #fff;
           }
-        }
-        .star {
-          margin-bottom: 25px;
-          .star-icon {
-            .fa-sharp {
-              color: #f1b561;
-              margin-right: 8px;
-              font-size: 11px;
-            }
+          &:disabled {
+            border: 1px solid rgba(45, 45, 46, 0.1);
+            background-color: rgba(189, 190, 192, 0.322);
+            box-shadow: 0;
           }
         }
       }

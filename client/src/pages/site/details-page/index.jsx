@@ -6,13 +6,13 @@ import "./index.scss";
 const DetailsPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [doctor, setDoctor] = useState({});
+  const [solider, setSolider] = useState({});
 
   const getDataByName = async () => {
     const response = await axios.get(
       `http://localhost:8080/personalities/${id}`
     );
-    setDoctor(response.data);
+    setSolider(response.data);
   };
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const DetailsPage = () => {
   return (
     <div id="details-page">
       <Helmet>
-        <title>{`Doctris - ${doctor.firstName} ${doctor.lastName}`}</title>
+        <title>{`${solider.name}`}</title>
         <meta name="description" content="test on react-helmet" />
         <meta name="theme-color" content="#ccc" />
       </Helmet>
@@ -29,62 +29,55 @@ const DetailsPage = () => {
         <div className="container">
           <div className="header">
             <div className="head">
-              <h1>About Doctor</h1>
+              <h1>{solider.name}</h1>
               <div className="about">
-                <p>
-                  Great doctor if you need your family member to get effective
-                  immediate assistance, emergency treatment or a simple
-                  consultation.
-                </p>
-              </div>
-              <div className="links">
-                <span>
-                  <NavLink to={"/"}>DOCTRIS</NavLink>
-                </span>
-                <span>
-                  <NavLink to={`/details-doctor/${id}`}>DOCTOR DETAILS</NavLink>
-                </span>
+                <p>{solider.longName}</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div id="doctor-details">
+      <div id="solider-details">
         <div className="container">
-          <div className="doctor-details">
-            <div className="img">
-              <img src={doctor.image} alt="" />
-            </div>
-            <div className="about-doctor">
-              <div className="about">
-                <h3>{`${doctor.firstName} ${doctor.lastName}`}</h3>
+          <div className="detail-about">
+            <div className="solider-details">
+              <div className="img">
+                <img src={solider.image} alt="" />
               </div>
-              <div className="star">
-                <div className="star-icon">
-                  {new Array(doctor.star).fill(
-                    <i className="fa-sharp fa-solid fa-star"></i>
-                  )}
+              <div className="about-solider">
+                <div className="about">
+                  <h3>{solider.name}</h3>
+                </div>
+                <div className="about">
+                  <p>({solider.date})</p>
+                </div>
+                <div className="rank">
+                  <p>{solider.rank}</p>
+                  <img src={solider?.rankImg} alt="" />
+                </div>
+
+                <div className="about">
+                  <span>Həyatı: </span>
+                  <p>{solider.life}</p>
                 </div>
               </div>
+            </div>
+            <div className="bottom">
               <div className="about">
-                <span>Job: </span>
-                <p>{doctor.doctorJob}</p>
+                <span>Döyüşlərdə iştirakı: </span>
+                <p>{solider.fight}</p>
               </div>
               <div className="about">
-                <span>Location: </span>
-                <p>{doctor.location}</p>
-              </div>
-              <div className="about">
-                <span>Appointment Price: </span>
-                <p>{doctor.money}.00 $</p>
-              </div>
-              <div className="about">
-                <span>Working Hours: </span>
-                <p>{doctor.hour}</p>
+                <span>Təltif və mükafatları: </span>
+                <ul>
+                  {solider.reward?.map((el) => {
+                    return el ? <li>{el}</li> : "";
+                  })}
+                </ul>
               </div>
               <div className="btn">
-                <button onClick={() => navigate("/")}>Go Back Home</button>
+                <button onClick={() => navigate("/")}>Geri</button>
               </div>
             </div>
           </div>

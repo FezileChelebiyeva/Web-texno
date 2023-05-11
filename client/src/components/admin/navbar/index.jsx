@@ -19,7 +19,7 @@ const AdminNavbar = () => {
               <div className="icon">
                 <i className="fa-solid fa-gauge"></i>
               </div>
-              Dashboard
+              Milli Qəhrəmanlar
             </NavLink>
           </li>
           <li className="nav-menu">
@@ -29,20 +29,6 @@ const AdminNavbar = () => {
               </div>
               Doctors
             </Link>
-            {doctor && (
-              <ul>
-                <li className="menu-item">
-                  <NavLink to={"/admin/doctors-list"}>
-                    <i className="fa-solid fa-caret-right"></i> Doctors
-                  </NavLink>
-                </li>
-                <li className="menu-item">
-                  <NavLink to={"/admin/add-doctor"}>
-                    <i className="fa-solid fa-caret-right"></i> Add Doctor
-                  </NavLink>
-                </li>
-              </ul>
-            )}
           </li>
           <li className="nav-menu">
             <Link onClick={() => setPatient(!patient)}>
@@ -51,20 +37,6 @@ const AdminNavbar = () => {
               </div>
               Patients
             </Link>
-            {patient && (
-              <ul>
-                <li className="menu-item">
-                  <NavLink to={"/admin/patients-list"}>
-                    <i className="fa-solid fa-caret-right"></i> Patients
-                  </NavLink>
-                </li>
-                <li className="menu-item">
-                  <NavLink to={"/admin/add-patient"}>
-                    <i className="fa-solid fa-caret-right"></i> Add Patient
-                  </NavLink>
-                </li>
-              </ul>
-            )}
           </li>
         </ul>
       </nav>
@@ -72,4 +44,4 @@ const AdminNavbar = () => {
   );
 };
 
-export default AdminNavbar;
+export default AdminNavbar;``
