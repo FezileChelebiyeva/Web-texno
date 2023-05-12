@@ -21,10 +21,20 @@ const Footer = () => {
                   <Link to={"/"}>Əsas səhifə</Link>
                 </li>
                 <li>
-                  <Link to={"/"}>Milli qəhrəmanlar</Link>
+                  <Link to={"/soliders"}>Milli qəhrəmanlar</Link>
                 </li>
                 <li>
-                  <Link to={"/"}>Əlavə</Link>
+                  <Link to={"/about"}>Məlumat</Link>
+                </li>
+                <li>
+                  <Link
+                  target="_blank"
+                    to={
+                      "https://az.wikipedia.org/wiki/Az%C9%99rbaycan%C4%B1n_Milli_Q%C9%99hr%C9%99manlar%C4%B1n%C4%B1n_siyah%C4%B1s%C4%B1"
+                    }
+                  >
+                    Əlavə
+                  </Link>
                 </li>
               </ul>
             </nav>

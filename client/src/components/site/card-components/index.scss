@@ -1,5 +1,17 @@
 #cards-component {
   padding: 80px 0;
+  .swiper-button-prev {
+    --swiper-navigation-size: 24px;
+    --swiper-navigation-color: black;
+    height: 20px;
+    cursor: pointer;
+  }
+  .swiper-button-next {
+    --swiper-navigation-color: black;
+    --swiper-navigation-size: 24px;
+    height: 20px;
+    cursor: pointer;
+  }
   .cards-component {
     h2 {
       text-align: center;
@@ -30,12 +42,12 @@
     .cards {
       display: flex;
       flex-wrap: wrap;
-      // justify-content: space-between;
       align-items: center;
       gap: 35px;
       margin-top: 60px;
       .card {
         width: 150px;
+        margin-left: 60px;
         .image {
           img {
             width: 100%;

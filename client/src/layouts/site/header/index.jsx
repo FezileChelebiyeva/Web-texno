@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.scss";
 import logo from "../../../assets/images/logo.png";
 import logo1 from "../../../assets/images/logo1.png";
 import { Link, NavLink } from "react-router-dom";
 const Header = () => {
+  const [navbar, setNavbar] = useState(true);
+  window.addEventListener("scroll", () => {
+    window.scrollY > 60 ? setNavbar(false) : setNavbar(true);
+  });
   return (
     <div id="header">
       <div id="first-header">
@@ -30,7 +34,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div id="navbar">
+      <div id={navbar ? "navbar" : "fixed-navbar"}>
         <div className="container">
           <div className="navbar">
             <nav>
@@ -39,14 +43,14 @@ const Header = () => {
                   <NavLink to={"/"}>Əsas səhifə</NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/galery"}>Məlumat</NavLink>
+                  <NavLink to={"/about"}>Məlumat</NavLink>
                 </li>
                 <li>
-                  <NavLink to={"/books"}>Mİlli Qəhrəmanlar</NavLink>
+                  <NavLink to={"/soliders"}>Mİlli Qəhrəmanlar</NavLink>
                 </li>
-                <li>
-                  <NavLink to={"/books"}>AzTU Mİlli Qəhrəmanları</NavLink>
-                </li>
+                {/* <li>
+                  <NavLink to={"/soliders-aztu"}>AzTU Mİlli Qəhrəmanları</NavLink>
+                </li> */}
               </ul>
             </nav>
           </div>

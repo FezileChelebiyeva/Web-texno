@@ -1,0 +1,24 @@
+#error-page {
+  padding-top: 200px;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.87),
+      rgba(0, 0, 0, 0.904)
+    ),
+    url("../../../assets/images/army10.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  .error-page {
+    .ant-result .ant-result-title {
+      color: #fff;
+      font-size: 30px;
+    }
+    .ant-result .ant-result-subtitle {
+      color: #fff;
+      font-size: 20px;
+    }
+  }
+}

@@ -1,6 +1,9 @@
 import React from "react";
 import { Button, Result } from "antd";
+import "./index.scss";
+import { useNavigate } from "react-router-dom";
 const NotFound = () => {
+  const navigate = useNavigate();
   return (
     <div id="error-page">
       <div className="container">
@@ -8,8 +11,12 @@ const NotFound = () => {
           <Result
             status="404"
             title="404"
-            subTitle="Sorry, the page you visited does not exist."
-            extra={<Button type="primary">Back Home</Button>}
+            subTitle="Bağışlayın, ziyarət etdiyiniz səhifə mövcud deyil."
+            extra={
+              <Button type="primary" onClick={() => navigate("/")}>
+                Əsas Səhifə
+              </Button>
+            }
           />
         </div>
       </div>

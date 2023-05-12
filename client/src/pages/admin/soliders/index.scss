@@ -1,10 +1,17 @@
 #soliders-page {
   background-color: #010511;
-  height: 100vh;
   #soliders {
     margin-left: 310px;
     padding-top: 90px;
+    padding-bottom: 50px;
     background-color: #010511;
+    .spin {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
     .soliders {
       display: flex;
       flex-wrap: wrap;
@@ -12,7 +19,8 @@
       gap: 35px;
       margin-top: 60px;
       .card {
-        width: 150px;
+        width: 170px;
+        border-radius: 5px;
         .image {
           img {
             width: 100%;
@@ -238,7 +246,6 @@
             color: rgba(252, 252, 252, 0.623);
           }
         }
-        
       }
       .btn {
         margin-top: 20px;

@@ -8,7 +8,17 @@ const initialState = {
 
 export const getData = createAsyncThunk("getData", async (value) => {
   const response = await axios.get("http://localhost:8080/personalities");
-  return response.data;
+  if (value === 1) {
+    return response.data.sort((a, b) =>
+      a.name[0].toLocaleLowerCase() > b.name[0].toLocaleLowerCase() ? 1 : -1
+    );
+  } else if (value) {
+    return response.data.filter((elem) =>
+      elem.name.toLocaleLowerCase().includes(value.toLocaleLowerCase())
+    );
+  } else {
+    return response.data;
+  }
 });
 
 export const postData = createAsyncThunk("postData", async (values) => {
@@ -21,7 +31,7 @@ export const deleteData = createAsyncThunk("deleteData", async (id) => {
 
 export const updateData = createAsyncThunk("updateData", async (obj) => {
   await axios.put(`http://localhost:8080/personalities/${obj.id}`, obj);
-//   console.log(obj);
+  //   console.log(obj);
 });
 
 export const getDataSlice = createSlice({

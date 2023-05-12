@@ -13,12 +13,12 @@ const AdminNavbar = () => {
       <nav>
         <ul>
           <li className="nav-menu">
-            <NavLink to={"/admin"}>
+            <Link to={"/admin"}>
               <div className="icon">
                 <i className="fa-solid fa-gauge"></i>
               </div>
               Admin Panel
-            </NavLink>
+            </Link>
           </li>
           <li className="nav-menu">
             <NavLink to={"/admin/solider-list"}>
@@ -36,7 +36,7 @@ const AdminNavbar = () => {
               Əlavə edin
             </NavLink>
           </li>
-          <li className="nav-menu">
+          {/* <li className="nav-menu">
             <NavLink to={"/admin/solider-list-aztu"}>
               <div className="icon">
                 <i className="fa-solid fa-person-military-rifle"></i>{" "}
@@ -51,7 +51,7 @@ const AdminNavbar = () => {
               </div>
               Əlavə edin (AzTu)
             </NavLink>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>

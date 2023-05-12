@@ -73,14 +73,15 @@ const DetailsPage = () => {
                 <span>Döyüşlərdə iştirakı: </span>
                 <p>{solider.fight}</p>
               </div>
-              <div className="about">
-                <span>Təltif və mükafatları: </span>
-                <ul>
-                  {solider.reward?.map((el) => {
-                    return el ? <li>{el}</li> : "";
-                  })}
-                </ul>
-              </div>
+              {solider.reward ? (
+                <div className="about">
+                  <span>Təltif və mükafatları: </span>
+                  <ul>{solider.reward}</ul>
+                </div>
+              ) : (
+                ""
+              )}
+
               <div className="btn">
                 <button onClick={() => navigate("/")}>Geri</button>
               </div>

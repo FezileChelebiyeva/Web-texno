@@ -10,7 +10,7 @@ import "./index.scss";
 const AddSolider = () => {
   const [navbar, setNavbar] = useState(true);
   const dispatch = useDispatch();
-  const [postImage, setPostImage] = useState("");
+  // const [postImage, setPostImage] = useState("");
   useEffect(() => {
     dispatch(getData(""));
   }, []);
@@ -30,30 +30,29 @@ const AddSolider = () => {
       validationSchema: solidersSchema,
       onSubmit: async (values) => {
         console.log(values);
-        postImage ? (values.image = postImage) : "";
+        // postImage ? (values.image = postImage) : "";
         dispatch(postData(values)).then(() => dispatch(getData()));
-        resetForm()
+        resetForm();
       },
     });
 
-  const convertToBase64 = (file) => {
-    return new Promise((resolve, reject) => {
-      const fileReader = new FileReader();
-      fileReader.readAsDataURL(file);
-      fileReader.onload = () => {
-        resolve(fileReader.result);
-      };
-      fileReader.onerror = (error) => {
-        reject(error);
-      };
-    });
-  };
-
-  const handleFileUpload = async (e) => {
-    const file = e.target.files[0];
-    const base64 = await convertToBase64(file);
-    setPostImage(base64);
-  };
+  // const convertToBase64 = (file) => {
+  //   return new Promise((resolve, reject) => {
+  //     const fileReader = new FileReader();
+  //     fileReader.readAsDataURL(file);
+  //     fileReader.onload = () => {
+  //       resolve(fileReader.result);
+  //     };
+  //     fileReader.onerror = (error) => {
+  //       reject(error);
+  //     };
+  //   });
+  // };
+  // const handleFileUpload = async (e) => {
+  //   const file = e.target.files[0];
+  //   const base64 = await convertToBase64(file);
+  //   setPostImage(base64);
+  // };
   return (
     <div id="add-solider-page">
       <AdminHeader navbar={navbar} setNavbar={setNavbar} />
@@ -116,7 +115,7 @@ const AddSolider = () => {
                       </div>
                     )}
                   </div>
-                  <div className="input-image">
+                  <div className="input-control">
                     <p>
                       <label htmlFor="image" className="m-2">
                         Şəkil
@@ -125,11 +124,10 @@ const AddSolider = () => {
                     <input
                       id="image"
                       name="image"
-                      type="file"
+                      type="text"
                       placeholder="Şəkil"
-                      onChange={(e) => {
-                        handleFileUpload(e);
-                      }}
+                      onChange={handleChange}
+                      value={values.image}
                     />
                     {errors.image && touched.image && (
                       <div
@@ -306,7 +304,7 @@ const AddSolider = () => {
               </div>
               <div className="btn">
                 <button type="submit" className="btn btn-success mt-2">
-                  Add Patient
+                 Əlavə edin
                 </button>
               </div>
             </form>

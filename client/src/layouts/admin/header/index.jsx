@@ -15,7 +15,7 @@ const AdminHeader = ({ navbar, setNavbar }) => {
           <div className="btn">
             <button onClick={() => navigate("/")}>
               <i className="fa-solid fa-right-to-bracket"></i>
-              GO TO SITE
+              Ana Səhifə
             </button>
           </div>
         </div>

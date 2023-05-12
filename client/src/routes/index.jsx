@@ -5,9 +5,11 @@ import AddSoliderAzTu from "../pages/admin/add-solider-aztu";
 import DashBoard from "../pages/admin/dashboard";
 import SolidersList from "../pages/admin/soliders";
 import SolidersListAzTu from "../pages/admin/soliders-aztu";
+import AboutPage from "../pages/site/about";
 import DetailsPage from "../pages/site/details-page";
 import HomePage from "../pages/site/home";
 import NotFound from "../pages/site/not-found";
+import SiteSolidersList from "../pages/site/solider-list";
 
 const ROUTES = [
   {
@@ -21,6 +23,14 @@ const ROUTES = [
       {
         path: "/details/:id",
         element: <DetailsPage />,
+      },
+      {
+        path: "/soliders",
+        element: <SiteSolidersList />,
+      },
+      {
+        path: "/about",
+        element: <AboutPage />,
       },
       {
         path: "*",

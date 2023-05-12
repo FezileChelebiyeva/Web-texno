@@ -8,21 +8,42 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @media only screen and (max-width: 990px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
       .logo {
         img {
           width: 180px;
+        }
+        @media only screen and (max-width: 990px) {
+          display: none;
         }
       }
       .description {
         display: flex;
         align-items: center;
         column-gap: 30px;
+        @media only screen and (max-width: 990px) {
+          justify-content: center;
+        }
+        @media only screen and (max-width: 540px) {
+          flex-direction: column;
+          justify-content: center;
+        }
         .head {
           h4 {
             max-width: 450px;
             color: #fff;
             font-size: 14px;
             line-height: 1.5;
+            @media only screen and (max-width: 990px) {
+              margin-left: 60px;
+            }
+            @media only screen and (max-width: 540px) {
+              font-size: 12px;
+            }
           }
           p {
             font-style: italic;
@@ -38,6 +59,11 @@
           justify-content: center;
           align-items: center;
           margin-right: 110px;
+          @media only screen and (max-width: 540px) {
+            img{
+              width: 80px;
+            }
+          }
         }
       }
     }
@@ -47,7 +73,10 @@
     padding: 20px;
     position: absolute;
     top: 130px;
-    z-index: 4;
+    z-index: 7;
+    @media only screen and (max-width: 990px) {
+      top: 200px;
+    }
     .navbar {
       display: flex;
       justify-content: center;
@@ -64,6 +93,57 @@
               letter-spacing: 0.3px;
               position: relative;
               transition: all 0.5s;
+              @media only screen and (max-width: 540px) {
+                font-size: 10px;
+              }
+              &:hover {
+                transition: all 0.5s;
+                color: #fcdd7a;
+              }
+              &.active {
+                color: #fcdd7a;
+                &::after {
+                  background: #fcdd7a;
+                  content: "";
+                  position: absolute;
+                  width: 99%;
+                  height: 1px;
+                  bottom: -2px;
+                  left: 1px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #fixed-navbar {
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    background-color: #010511;
+    .navbar {
+      display: flex;
+      justify-content: center;
+      nav {
+        ul {
+          display: flex;
+          column-gap: 40px;
+          align-items: center;
+          li {
+            a {
+              color: white;
+              font-size: 17px;
+              font-weight: 600;
+              letter-spacing: 0.3px;
+              position: relative;
+              transition: all 0.5s;
+              @media only screen and (max-width: 540px) {
+                font-size: 10px;
+              }
               &:hover {
                 transition: all 0.5s;
                 color: #fcdd7a;
